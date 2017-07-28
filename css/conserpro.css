@@ -1,0 +1,115 @@
+
+@font-face {
+    font-family: 'default';
+    src: url('../fonts/spranq_eco_sans_regular-webfont.woff2') format('woff2'),
+         url('../fonts/spranq_eco_sans_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    background:transparent !important;
+    color:#000 !important;
+    text-shadow:none !important;
+    filter:none !important;
+    -ms-filter:none !important;
+    color: #000;
+}
+
+body {
+    /* margin: 3cm 2cm 2cm 3cm; */
+    padding:0;
+    line-height: 1.4em;
+    text-align: justify;
+    font-family: 'default';
+    font: 11pt;
+    white-space: pre-wrap;
+}
+
+@page :first {
+  margin: 2cm;
+}
+
+@page {
+    margin: 3cm 2cm 2cm 3cm;
+     @bottom-right {
+    content: counter(page) " de " counter(pages);
+   }
+}
+
+nav, footer, video, audio, object, embed {
+    display:none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.print {
+    display:block;
+}
+
+.no-print {
+    display:none;
+}
+
+p a {
+    background: green;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+
+h1 {
+font-size: 24pt;
+}
+
+h2 {
+font-size: 18pt;
+}
+
+h3 {
+font-size: 14pt;
+}
+
+p {
+widows: 3;
+}
+
+p {
+orphans: 3;
+}
+
+.page-break {page-break-after: always;}
+
+#content {
+    display: table;
+}
+
+#pageFooter {
+    display: table-footer-group;
+}
+
+#pageFooter:after {
+    text-align: right;
+    counter-increment: page;
+    content: counter(page-1);
+}
+
+.titulo{
+    font-size: 20px;
+    text-align: center;
+}
+
+.numero-de-paginas  {
+    position: relative;
+    min-height: 150px;
+}
+
+.numero-de-paginas-conteudo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
