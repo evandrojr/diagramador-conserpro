@@ -1,4 +1,5 @@
-./secoes/
+secoes/
+node_modules/
 secoes
 index.html
 index.pdf
