@@ -4,7 +4,9 @@ Diagramador e gerador de PDF para trabalhos do Conserpro. Trabalho em progresso.
 
 ## Instalação
 
-npm install -g phantomjs
+npm install -g phantomjs@1.9.8
+
+Não funciona com phantomjs 2!
 
 ## Produção do texto
 

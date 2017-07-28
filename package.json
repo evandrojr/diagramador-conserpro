@@ -1,0 +1,22 @@
+{
+  "name": "diagramador-conserpro",
+  "version": "1.0.0",
+  "description": "Diagramador e gerador de PDF para trabalhos do Conserpro. Trabalho em progresso. Por favor, crie o seu fork e contribua com a formatação via pull requests. Sua ajuda será apreciada.",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evandrojr/diagramador-conserpro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evandrojr/diagramador-conserpro/issues"
+  },
+  "homepage": "https://github.com/evandrojr/diagramador-conserpro#readme",
+  "dependencies": {
+    "phantomjs": "^1.9.8"
+  }
+}

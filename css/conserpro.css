@@ -3,8 +3,17 @@
     src: url('../fonts/spranq_eco_sans_regular-webfont.woff2') format('woff2'),
          url('../fonts/spranq_eco_sans_regular-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    /* font-style: normal; */
 }
+
+/* @font-face {
+    font-family: 'negrito';
+    src: url('../fonts/spranq_eco_sans_regular-webfont.woff2') format('woff2'),
+         url('../fonts/spranq_eco_sans_regular-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+} */
+
 
 * {
     background:transparent !important;
@@ -25,6 +34,11 @@ body {
     /* text-rendering: optimizeLegibility; */
 }
 
+b{
+    font-weight: 900;
+    font-weight: bolder;
+    /* font-family: 'negrito'; */
+}
 
 @page :first {
   margin: 2cm;
