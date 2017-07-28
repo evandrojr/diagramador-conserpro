@@ -1,11 +1,9 @@
-
 @font-face {
     font-family: 'default';
     src: url('../fonts/spranq_eco_sans_regular-webfont.woff2') format('woff2'),
          url('../fonts/spranq_eco_sans_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 * {
@@ -18,14 +16,15 @@
 }
 
 body {
-    /* margin: 3cm 2cm 2cm 3cm; */
     padding:0;
     line-height: 1.4em;
-    text-align: justify;
     font-family: 'default';
     font: 11pt;
-    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+    /* text-rendering: optimizeLegibility; */
 }
+
 
 @page :first {
   margin: 2cm;
@@ -33,9 +32,6 @@ body {
 
 @page {
     margin: 3cm 2cm 2cm 3cm;
-     @bottom-right {
-    content: counter(page) " de " counter(pages);
-   }
 }
 
 nav, footer, video, audio, object, embed {
@@ -56,7 +52,6 @@ img {
 }
 
 p a {
-    background: green;
     word-wrap: break-word;
     text-align: justify;
 }

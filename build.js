@@ -13,6 +13,12 @@ function run_cmd(cmd, args, callBack) {
 var contents = fs.readFileSync('index_inicio.html', 'utf8');
 var sections_files = [
     'capa',
+    'folha_de_rosto',
+    'resumo',
+    'listas',
+    'sumario',
+    'introducao',
+
 ];
 
 sections_files.forEach(function (file) {
@@ -26,5 +32,5 @@ console.log(contents);
 var contents = fs.writeFileSync('index.html', contents, 'utf8');
 
 run_cmd("rm", ['-f','index.pdf'], function (text) { console.log(text) });
-run_cmd("phantomjs", ['./render.js'], function (text) { console.log(text) });
-run_cmd("xdg-open", ['./index.pdf'], function (text) { console.log(text) });
+run_cmd("phantomjs", ['render.js'], function (text) { console.log(text) });
+// run_cmd("xdg-open", ['index.pdf'], function (text) { console.log(text) });

@@ -17,20 +17,20 @@ page.paperSize = {
   //   })
   // },
 
-  // footer: {
-  //   height: "1cm",
-  //   contents: phantom.callback(function (pageNum, numPages) {
-  //     if (pageNum > 1)
-  //       return "<p><span style='float:right'>" + pageNum + " / " + numPages + "</span></p>";
-  //   })
-  // }
+  footer: {
+    height: "1cm",
+    contents: phantom.callback(function (pageNum, numPages) {
+      if (pageNum > 1)
+        return "<p><span style='float:right'>" + numPages + "</span></p>";
+    })
+  }
 
 };
 
-
-page.open('file:////home/j/conserpro/lab/index.html', function () {
-  page.render('/home/j/conserpro/lab/index.pdf');
+// console.log(__dirname);
+page.open('file:////home/j/conserpro/diagramador-conserpro/index.html', function () {
+// page.open(`file://${__dirname}/index.html`, function () {
+  page.render('/home/j/conserpro/diagramador-conserpro/index.pdf');
   phantom.exit(0);
-  xdg-open("index.pdf");
 });
 
