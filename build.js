@@ -20,6 +20,7 @@ var sections_files = [
     'introducao',
     'incidente_itil',
     'prova_de_conceito',
+    'limitacoes',
     'referencias'
 ];
 
