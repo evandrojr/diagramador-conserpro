@@ -18,7 +18,7 @@ var sections_files = [
     'listas',
     'sumario',
     'introducao',
-
+    'prova_de_conceito'
 ];
 
 sections_files.forEach(function (file) {
