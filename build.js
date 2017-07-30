@@ -18,12 +18,16 @@ var sections_files = [
     'listas',
     'sumario',
     'introducao',
-    'prova_de_conceito'
+    'incidente_itil',
+    'prova_de_conceito',
+    'referencias'
 ];
 
 sections_files.forEach(function (file) {
     var str = fs.readFileSync(`./secoes/${file}.html`, 'utf8');
+    // str = str.replace(/\ \ \ \ /g, '&nbsp;&nbsp;&nbsp;&nbsp;');
     contents += str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+    // contents += fs.readFileSync(`./secoes/${file}.html`, 'utf8');
 });
 
 contents += `   </body>

@@ -57,6 +57,16 @@ p a {
     text-align: justify;
 }
 
+p {
+    text-indent: 30px;
+    word-wrap: break-word;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    widows: 3;
+    orphans: 3;
+}
+
 
 h1 {
 font-size: 24pt;
@@ -68,14 +78,6 @@ font-size: 18pt;
 
 h3 {
 font-size: 14pt;
-}
-
-p {
-widows: 3;
-}
-
-p {
-orphans: 3;
 }
 
 .page-break {page-break-after: always;}
