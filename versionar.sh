@@ -6,6 +6,6 @@ acp () {
         git push
 }
 
-acp $1
+acp "$*"
 cd ..
-acp $1
+acp "$*"
