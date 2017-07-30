@@ -24,7 +24,7 @@ var sections_files = [
 ];
 
 sections_files.forEach(function (file) {
-    var str = fs.readFileSync(`./secoes/${file}.html`, 'utf8');
+    var str = fs.readFileSync(`./secoes/${file}.txt`, 'utf8');
     // str = str.replace(/\ \ \ \ /g, '&nbsp;&nbsp;&nbsp;&nbsp;');
     contents += str.replace(/(?:\r\n|\r|\n)/g, '<br />');
     // contents += fs.readFileSync(`./secoes/${file}.html`, 'utf8');
