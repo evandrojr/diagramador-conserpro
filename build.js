@@ -34,8 +34,44 @@ sections_files.forEach(function (file) {
 contents += `   </body>
 </html>`;
 
-console.log(contents);
-var contents = fs.writeFileSync('index.html', contents, 'utf8');
+
+const cheerio = require('cheerio')
+const $ = cheerio.load(contents, 'utf8');
+
+const h1s = [];
+$('h1').each(function(i, elem) {
+  if(i > 0){
+    $(this).text(i  +  " " + $(this).text());
+    $(this).data('idx', i);
+    // console.log($(this).data());
+    // h1s[i] = $(this).text();
+  }
+});
+
+$('h2').each(function(i, elem) {
+    var anterior = $(this).prevAll('h1');
+    var idx = anterior.data('idx');
+    $(this).data('idx', idx + '.' + (i + 1));
+    $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
+});
+
+$('h3').each(function(i, elem) {
+    var anterior = $(this).prevAll('h2');
+    var idx = anterior.data('idx');
+    $(this).data('idx', idx + '.' + (i + 1));
+    $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
+});
+
+
+
+// var h1 = $('h1').;
+
+// console.log(h1s);
+
+// return;
+
+console.log($.html());
+var contents = fs.writeFileSync('index.html',$.html(), 'utf8');
 
 run_cmd("rm", ['-f','index.pdf'], function (text) { console.log(text) });
 run_cmd("phantomjs", ['render.js'], function (text) { console.log(text) });
