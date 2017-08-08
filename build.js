@@ -34,7 +34,6 @@ sections_files.forEach(function (file) {
 contents += `   </body>
 </html>`;
 
-
 const cheerio = require('cheerio')
 const $ = cheerio.load(contents, 'utf8');
 
