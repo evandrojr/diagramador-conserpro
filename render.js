@@ -4,8 +4,8 @@ page.paperSize = {
   format: 'A4',
   orientation: 'portrait',
   margin: {
-    top: '2cm',
-    left: '2cm',
+    top: '3cm',
+    left: '3cm',
     bottom: '2cm',
     right: '2cm'
   },

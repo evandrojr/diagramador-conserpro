@@ -27,10 +27,12 @@ body {
     /* text-rendering: optimizeLegibility; */
 }
 
+/* Não funciona no Phantomjs  */
 @page :first {
   margin: 2cm;
 }
 
+ /* Não funciona no Phantomjs  */
 @page {
     margin: 3cm 2cm 2cm 3cm;
 }
@@ -38,7 +40,6 @@ body {
 nav, footer, video, audio, object, embed {
     display:none;
 }
-
 
 img {
     max-width: 100%;
@@ -82,7 +83,6 @@ li{
     /* margin: 0; */
     /* padding: 0; */
 }
-
 
 h1 {
     font-size: 18pt;
@@ -137,4 +137,9 @@ td {
 }
 .summary-page {
     background-color: #FFFFFF  !important;
+}
+
+/* Solução criativa para simular bordas iguais na capa */
+.capa{
+    padding-right: 1cm;
 }
