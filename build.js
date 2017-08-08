@@ -38,30 +38,38 @@ contents += `   </body>
 const cheerio = require('cheerio')
 const $ = cheerio.load(contents, 'utf8');
 
-const h1s = [];
 $('h1').each(function(i, elem) {
-  if(i > 0){
-    $(this).text(i  +  " " + $(this).text());
-    $(this).data('idx', i);
-    // console.log($(this).data());
-    // h1s[i] = $(this).text();
-  }
+    $(this).text((i  +  1) + " " + $(this).text());
+    $(this).data('idx', i  +  1);
+    $(this).addClass('summary');
 });
 
-$('h2').each(function(i, elem) {
-    var anterior = $(this).prevAll('h1');
-    var idx = anterior.data('idx');
-    $(this).data('idx', idx + '.' + (i + 1));
-    $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
-});
+// $('h2').each(function(i, elem) {
+//     var anterior = $(this).prevAll('h1');
+//     var idx = anterior.data('idx');
+//     $(this).data('idx', idx + '.' + (i + 1));
+//     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
+//     $(this).addClass('summary');
+// });
 
-$('h3').each(function(i, elem) {
+// $('h3').each(function(i, elem) {
+//     var anterior = $(this).prevAll('h2');
+//     var idx = anterior.data('idx');
+//     $(this).data('idx', idx + '.' + (i + 1));
+//     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
+//     $(this).addClass('summary');
+// });
+
+
+$('.summary').each(function(i, elem) {
     var anterior = $(this).prevAll('h2');
     var idx = anterior.data('idx');
     $(this).data('idx', idx + '.' + (i + 1));
     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
+    $(this).addClass('summary');
 });
 
+// $('#summary').append($('.summary'));
 
 
 // var h1 = $('h1').;

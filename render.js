@@ -21,7 +21,7 @@ page.paperSize = {
     height: "1cm",
     contents: phantom.callback(function (pageNum, numPages) {
       if (pageNum > 1)
-        return "<p><span style='float:right;botton: 0px'>" + pageNum + "</span></p>";
+        return "<p data-page='" + pageNum + "'><span style='float:right;botton: 0px'>" + pageNum + "</span></p>";
     })
   }
 
