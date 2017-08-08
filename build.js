@@ -44,16 +44,16 @@ $('h1').each(function(i, elem) {
 });
 
 $('h2').each(function(i, elem) {
-    var anterior = $(this).prevAll('h1');
-    var idx = anterior.data('idx');
+    let anterior = $(this).prevAll('h1');
+    let idx = anterior.data('idx');
     $(this).data('idx', idx + '.' + (i + 1));
     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
     $(this).addClass('summary');
 });
 
 $('h3').each(function(i, elem) {
-    var anterior = $(this).prevAll('h2');
-    var idx = anterior.data('idx');
+    let anterior = $(this).prevAll('h2');
+    let idx = anterior.data('idx');
     $(this).data('idx', idx + '.' + (i + 1));
     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
     $(this).addClass('summary');
@@ -63,24 +63,14 @@ var pageMax = 20;
 
 var summary = "";
 $('.summary').each(function(i, elem) {
-    //1 ate max page
-
-
     summary += `<div class="dots">&nbsp;
                     <span class="summary-page" style='float:left'>${$(this).text()}</span>
                     <span class="summary-page" style='float:right '> ${ (i+1)*pageMax/pageMax }</span>
                 </div>`
 });
 
-
 $('#summary').append(summary);
 
-
-// var h1 = $('h1').;
-
-// console.log(h1s);
-
-// return;
 
 console.log($.html());
 var contents = fs.writeFileSync('index.html',$.html(), 'utf8');
