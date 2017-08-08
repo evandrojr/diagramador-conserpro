@@ -131,3 +131,10 @@ font-size: 14pt;
 td {
     text-align: center;
 }
+
+.dots {
+    background:url('../img/dot.gif') repeat-x bottom  !important;
+}
+.summary-page {
+    background-color: #FFFFFF  !important;
+}

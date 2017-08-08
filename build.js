@@ -59,12 +59,19 @@ $('h3').each(function(i, elem) {
     $(this).addClass('summary');
 });
 
+var pageMax = 20;
+
 var summary = "";
 $('.summary').each(function(i, elem) {
-    summary += `<div>
-                  <div align='left'>${$(this).text()}</div>
+    //1 ate max page
+
+
+    summary += `<div class="dots">&nbsp;
+                    <span class="summary-page" style='float:left'>${$(this).text()}</span>
+                    <span class="summary-page" style='float:right '> ${ (i+1)*pageMax/pageMax }</span>
                 </div>`
 });
+
 
 $('#summary').append(summary);
 
