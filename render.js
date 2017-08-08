@@ -3,19 +3,27 @@ var page = require('webpage').create();
 page.paperSize = {
   format: 'A4',
   orientation: 'portrait',
-  margin: {
-    top: '2cm',
-    left: '2cm',
-    bottom: '2cm',
-    right: '2cm'
-  },
-
-  // header: {
-  //   height: "1cm",
-  //   contents: phantom.callback(function(pageNum, numPages) {
-  //     return "";
-  //   })
+  // margin: {
+  //   top: '3cm',
+  //   right: '2cm',
+  //   bottom: '2cm',
+  //   left: '3cm',
   // },
+
+  // margin: {
+  //   top: '2cm',
+  //   right: '2cm',
+  //   bottom: '2cm',
+  //   left: '2cm',
+  // },
+
+
+  header: {
+    height: "3cm",
+    contents: phantom.callback(function(pageNum, numPages) {
+      return "";
+    })
+  },
 
   footer: {
     height: "1cm",
