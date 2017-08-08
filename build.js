@@ -43,24 +43,15 @@ $('h1').each(function(i, elem) {
     $(this).addClass('summary');
 });
 
-// $('h2').each(function(i, elem) {
-//     var anterior = $(this).prevAll('h1');
-//     var idx = anterior.data('idx');
-//     $(this).data('idx', idx + '.' + (i + 1));
-//     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
-//     $(this).addClass('summary');
-// });
+$('h2').each(function(i, elem) {
+    var anterior = $(this).prevAll('h1');
+    var idx = anterior.data('idx');
+    $(this).data('idx', idx + '.' + (i + 1));
+    $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
+    $(this).addClass('summary');
+});
 
-// $('h3').each(function(i, elem) {
-//     var anterior = $(this).prevAll('h2');
-//     var idx = anterior.data('idx');
-//     $(this).data('idx', idx + '.' + (i + 1));
-//     $(this).text(idx + '.' + (i + 1) + ' ' + $(this).text());
-//     $(this).addClass('summary');
-// });
-
-
-$('.summary').each(function(i, elem) {
+$('h3').each(function(i, elem) {
     var anterior = $(this).prevAll('h2');
     var idx = anterior.data('idx');
     $(this).data('idx', idx + '.' + (i + 1));
@@ -68,7 +59,14 @@ $('.summary').each(function(i, elem) {
     $(this).addClass('summary');
 });
 
-// $('#summary').append($('.summary'));
+var summary = "";
+$('.summary').each(function(i, elem) {
+    summary += `<div>
+                  <div align='left'>${$(this).text()}</div>
+                </div>`
+});
+
+$('#summary').append(summary);
 
 
 // var h1 = $('h1').;
