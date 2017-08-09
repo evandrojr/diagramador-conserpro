@@ -68,7 +68,6 @@ p {
     orphans: 3;
 }
 
-
 ul {
     /* margin: 0; */
     /* padding: 0; */
@@ -142,4 +141,10 @@ td {
 /* Solução criativa para simular bordas iguais na capa */
 .capa{
     padding-right: 1cm;
+}
+
+div.quotation-block{
+   text-align: justify;
+   width: 70%;
+   font-style: italic;
 }

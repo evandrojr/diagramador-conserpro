@@ -18,6 +18,7 @@ var sections_files = [
     'listas',
     'sumario',
     'introducao',
+    'o_problema',
     'incidente_itil',
     'prova_de_conceito',
     'limitacoes',
