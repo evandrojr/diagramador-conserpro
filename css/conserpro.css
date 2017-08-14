@@ -148,3 +148,8 @@ div.quotation-block{
    width: 70%;
    font-style: italic;
 }
+
+div.ilustracao{
+    /* text-align: "center"; */
+    padding: 50px;
+}
