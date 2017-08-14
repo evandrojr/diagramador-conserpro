@@ -38,24 +38,27 @@ contents += `   </body>
 const cheerio = require('cheerio')
 const $ = cheerio.load(contents, 'utf8');
 
-$('h1').each(function(i, elem) {
-    let idx = i+1;
-    $(this).text(idx + " " + $(this).text());
-    $(this).data('idx', idx);
+$('h1').each(function (i, elem) {
+    let idx = i - 2;
+
+    if (i >= 3) {
+        $(this).text(idx + " " + $(this).text());
+        $(this).data('idx', idx);
+    }
     $(this).addClass('summary');
 });
 
 let subIdx = 1;
 let lastIdx = 0;
-$('h2').each(function(i, elem) {
+$('h2').each(function (i, elem) {
     let anterior = $(this).prevAll('h1');
     let idx = anterior.data('idx');
-    if(lastIdx==0){
+    if (lastIdx == 0) {
         lastIdx = idx;
-    }else{
-        if(lastIdx == idx){
+    } else {
+        if (lastIdx == idx) {
             subIdx++;
-        }else{
+        } else {
             subIdx = 1;
         }
         lastIdx = idx;
@@ -70,15 +73,15 @@ $('h2').each(function(i, elem) {
 
 subIdx = 1;
 lastIdx = 0;
-$('h3').each(function(i, elem) {
+$('h3').each(function (i, elem) {
     let anterior = $(this).prevAll('h2');
     let idx = anterior.data('idx');
-    if(lastIdx==0){
+    if (lastIdx == 0) {
         lastIdx = idx;
-    }else{
-        if(lastIdx == idx){
+    } else {
+        if (lastIdx == idx) {
             subIdx++;
-        }else{
+        } else {
             subIdx = 1;
         }
         lastIdx = idx;
@@ -92,10 +95,10 @@ $('h3').each(function(i, elem) {
 var pageMax = 20;
 
 var summary = "";
-$('.summary').each(function(i, elem) {
+$('.summary').each(function (i, elem) {
     summary += `<div class="dots">&nbsp;
                     <span class="summary-page" style='float:left'>${$(this).text()}</span>
-                    <span class="summary-page" style='float:right '> ${ (i+1)*pageMax/pageMax }</span>
+                    <span class="summary-page" style='float:right '> ${ (i + 1) * pageMax / pageMax}</span>
                 </div>`
 });
 
@@ -103,8 +106,8 @@ $('#summary').append(summary);
 
 
 console.log($.html());
-var contents = fs.writeFileSync('index.html',$.html(), 'utf8');
+var contents = fs.writeFileSync('index.html', $.html(), 'utf8');
 
-run_cmd("rm", ['-f','index.pdf'], function (text) { console.log(text) });
+run_cmd("rm", ['-f', 'index.pdf'], function (text) { console.log(text) });
 run_cmd("phantomjs", ['render.js'], function (text) { console.log(text) });
 // run_cmd("xdg-open", ['index.pdf'], function (text) { console.log(text) });

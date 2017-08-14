@@ -18,9 +18,9 @@
 
 body {
     padding:0;
-    line-height: 1.4em;
+    line-height: 1.8em;
     font-family: 'default';
-    font: 10pt;
+    font-size: 10pt;
     word-wrap: break-word;
     text-align: justify;
     text-rendering: geometricPrecision;
@@ -84,15 +84,15 @@ li{
 }
 
 h1 {
-    font-size: 18pt;
+    font-size: 10pt;
 }
 
 h2 {
-font-size: 16pt;
+font-size: 10pt;
 }
 
 h3 {
-font-size: 14pt;
+font-size: 10pt;
 }
 
 .page-break {page-break-after: always;}
@@ -151,5 +151,5 @@ div.quotation-block{
 
 div.ilustracao{
     /* text-align: "center"; */
-    padding: 50px;
+    padding: 50px 0 50px 0;
 }
