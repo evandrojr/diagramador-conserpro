@@ -19,7 +19,7 @@ var sections_files = [
     'sumario',
     'introducao',
     'o_problema',
-    // 'incidente_itil',
+    'incidente_itil',
     'prova_de_conceito',
     'limitacoes',
     'referencias'
