@@ -1,0 +1,1 @@
+yad --title="O ticket 2017RI/0000140686 foi encaminhado para o grupo GSDEBASIGEPEPA"  --text="\nO ticket 2017RI/0000140686 foi encaminhado para o grupo:\n\nGSDEBASIGEPEPA\n\nResumo do incidente:\nSIGEPE,SIGEPE - PROBLEMAS NA APLICAÇÃO"
