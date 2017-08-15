@@ -105,7 +105,14 @@ h3 {
     font-size: 11pt;
 }
 
-.page-break {page-break-after: always;}
+.page-break {page-break-after: always;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+
+
+}
 
 #content {
     display: table;
