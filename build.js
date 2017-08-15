@@ -40,7 +40,7 @@ const cheerio = require('cheerio')
 const $ = cheerio.load(contents, 'utf8');
 
 $('h1').each(function (i, elem) {
-    let idx = i - 2;
+    let idx = i - 3;
 
     if (i >= 4) {
         $(this).text(idx + " " + $(this).text());
@@ -115,7 +115,7 @@ $('h3').each(function (i, elem) {
 
 
 
-var pageMax = 20;
+var pageMax = 18;
 
 var summary = "";
 $('.summary').each(function (i, elem) {
