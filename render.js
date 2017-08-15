@@ -20,8 +20,8 @@ page.paperSize = {
   footer: {
     height: "1cm",
     contents: phantom.callback(function (pageNum, numPages) {
-      if (pageNum > 1)
-        return "<p data-page='" + pageNum + "'><span style='float:right;botton: 0px'>" + pageNum + "</span></p>";
+      if (pageNum > 2)
+        return "<p data-page='" + (pageNum - 1) + "'><span style='float:right;botton: 0px'>" + (pageNum - 1) + "</span></p>";
     })
   }
 
