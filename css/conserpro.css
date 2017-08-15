@@ -20,7 +20,7 @@ body {
     padding:0;
     line-height: 1.8em;
     font-family: 'default';
-    font-size: 10pt;
+    font-size: 11pt;
     word-wrap: break-word;
     text-align: justify;
     text-rendering: geometricPrecision;
@@ -84,15 +84,25 @@ li{
 }
 
 h1 {
-    font-size: 10pt;
+    /* margin: 0;
+    padding: 0;
+    border: 0; */
+
+    font-size: 11pt;
 }
 
 h2 {
-font-size: 10pt;
+    /* margin: 0;
+    padding: 0; */
+
+    font-size: 11pt;
 }
 
 h3 {
-font-size: 10pt;
+    /* margin: 0;
+    padding: 0; */
+
+    font-size: 11pt;
 }
 
 .page-break {page-break-after: always;}

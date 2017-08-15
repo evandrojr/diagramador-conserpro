@@ -22,6 +22,7 @@ var sections_files = [
     'incidente_itil',
     'prova_de_conceito',
     'limitacoes',
+    'consideracoes_finais',
     'referencias'
 ];
 
@@ -41,7 +42,7 @@ const $ = cheerio.load(contents, 'utf8');
 $('h1').each(function (i, elem) {
     let idx = i - 2;
 
-    if (i >= 3) {
+    if (i >= 4) {
         $(this).text(idx + " " + $(this).text());
         $(this).data('idx', idx);
     }
@@ -92,6 +93,28 @@ $('h3').each(function (i, elem) {
     $(this).addClass('summary');
 });
 
+
+// $('img.ilustracao').each(function (i, elem) {
+//     let anterior = $(this).prevAll('h1');
+//     let idx = anterior.data('idx');
+//     if (lastIdx == 0) {
+//         lastIdx = idx;
+//     } else {
+//         if (lastIdx == idx) {
+//             subIdx++;
+//         } else {
+//             subIdx = 1;
+//         }
+//         lastIdx = idx;
+//     }
+//     console.log(idx, subIdx, lastIdx);
+//     $(this).data('idx', idx + '.' + subIdx);
+//     $(this).text(idx + '.' + subIdx + ' ' + $(this).text());
+//     $(this).addClass('summary');
+// });
+
+
+
 var pageMax = 20;
 
 var summary = "";
@@ -103,6 +126,17 @@ $('.summary').each(function (i, elem) {
 });
 
 $('#summary').append(summary);
+
+
+
+var ilustrations = "";
+$('.ilustracao').each(function (i, elem) {
+    ilustrations += `<div class="">${i+1} - ${$(this).data('titulo')}</div>`
+    $(this).append(`<div>Ilustração ${i+1} - ${$(this).data('titulo')}</div>`);
+});
+
+$('#ilustrations').append(ilustrations);
+
 
 
 console.log($.html());
