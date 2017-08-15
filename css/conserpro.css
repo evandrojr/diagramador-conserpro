@@ -123,8 +123,8 @@ font-size: 10pt;
 
 .numero-de-paginas-conteudo {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 15px;
+    /* left: 0; */
 }
 
 td {
