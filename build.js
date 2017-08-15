@@ -128,11 +128,18 @@ $('.summary').each(function (i, elem) {
 $('#summary').append(summary);
 
 
-
+var ilustrationsPages = [12,13,17,18,19,20];
 var ilustrations = "";
 $('.ilustracao').each(function (i, elem) {
-    ilustrations += `<div class="">${i+1} - ${$(this).data('titulo')}</div>`
+    // ilustrations += `<div class="">${i+1} - ${$(this).data('titulo')}</div>`
     $(this).append(`<div>Ilustração ${i+1} - ${$(this).data('titulo')}</div>`);
+
+    ilustrations += `<div class="dots">&nbsp;
+    <span class="summary-page" style='float:left'>${i+1} - ${$(this).data('titulo')}</span>
+    <span class="summary-page" style='float:right '> ${ ilustrationsPages[i]}</span>
+</div>`
+
+
 });
 
 $('#ilustrations').append(ilustrations);
