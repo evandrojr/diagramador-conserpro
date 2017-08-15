@@ -115,13 +115,13 @@ $('h3').each(function (i, elem) {
 
 
 
-var pageMax = 18;
+var headerPages =[1, 2, 4, 4, 6, 6, 8, 9, 10, 11, 11 ,13,14,15,16,17,17,18,19,20,21,21,22,22,23,23,23,23,24,26];
 
 var summary = "";
 $('.summary').each(function (i, elem) {
     summary += `<div class="dots">&nbsp;
                     <span class="summary-page" style='float:left'>${$(this).text()}</span>
-                    <span class="summary-page" style='float:right '> ${ (i + 1) * pageMax / pageMax}</span>
+                    <span class="summary-page" style='float:right '> ${ headerPages[i]}</span>
                 </div>`
 });
 
