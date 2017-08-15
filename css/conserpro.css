@@ -28,14 +28,14 @@ body {
 }
 
 /* Não funciona no Phantomjs  */
-@page :first {
+/* @page :first {
   margin: 2cm;
-}
+} */
 
  /* Não funciona no Phantomjs  */
-@page {
+/* @page {
     margin: 3cm 2cm 2cm 3cm;
-}
+} */
 
 nav, footer, video, audio, object, embed {
     display:none;
@@ -122,8 +122,8 @@ h3 {
 }
 
 .titulo{
-    line-height: 1.8em;
-    font-size: 24px;
+    /* line-height: 15pt; */
+    font-size: 20pt;
     text-align: center;
 }
 
@@ -132,9 +132,9 @@ h3 {
     min-height: 150px;
 }
 
-.numero-de-paginas-conteudo {
-    position: absolute;
-    bottom: 15px;
+.page-count {
+    position: relative;
+    top: 22mm;
     /* left: 0; */
 }
 
